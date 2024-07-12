@@ -12,7 +12,7 @@ const LandingPage:React.FC = () => {
      return setIsSelected(booking);
  }
     return(
-        <div className={'flex flex-col items-center justify-center space-y-8 pt-8 text-center bg-gradient-to-bl from-green-400 to-blue-600'}>
+        <div className={'flex flex-col items-center justify-center space-y-8 pt-8 pb-16 text-center bg-gradient-to-bl from-green-400 to-blue-600'}>
             <div className={'px-3'}>
                 <h1 className={'text-3xl font-bold'}>Your Safety Matters To us. </h1>
                 <h3 className={'text-xl font-bold'}>100% Sanitized | Safe | Reliable cab.</h3>
@@ -50,7 +50,7 @@ const LandingPage:React.FC = () => {
                 <div className={`h-3 w-5 bg-transparent rounded-full ${isRoute === 'multicity' ? '' : 'hidden'}`}>a</div>
 
                 {/* DATE AND TIME SELECTION*/}
-                <div className={'w-full flex flex-col text-black bg-white px-3 text-center'}>
+                <div className={'w-full flex flex-col text-black bg-white px-3 text-center pb-5'}>
                     <input type={'date'} placeholder={'start date'} className={'p-2  outline-none bg-white'}/>
                     <div className={'h-0.5 w-full bg-gray-200'}></div>
                     <input type={'date'} placeholder={'end date'}
