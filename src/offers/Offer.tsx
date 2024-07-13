@@ -32,9 +32,11 @@ const Offer:React.FC =()=>{
                 </div>
                 <div className={'flex flex-row justify-center space-x-3'}>
                 {
+
                     offerInfo.map((offer, i) =>
                     <div key={i} onClick={() => handleOffer(i)} className={'text-black text-xl'}>
                         <GoDotFill />
+                        <span className={'hidden'}>{offer.route}</span>
                     </div>
                     )
                 }
