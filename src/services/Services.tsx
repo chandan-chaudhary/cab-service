@@ -7,7 +7,7 @@ import { GiTakeMyMoney } from "react-icons/gi";
 const Services:React.FC= () => {
     return(
         <section>
-            <div className={'flex flex-col text-white items-center bg-blue-800 px-7 pb-12'}>
+            <div className={'flex flex-col text-white items-center bg-blue-950 px-7 pb-12'}>
                 <div className={'flex flex-row mt-7'}>
                     <FaTaxi className={'text-8xl '}/>
                     <div className={'ml-8'}>

@@ -10,8 +10,8 @@ const Offer:React.FC =()=>{
     return(
         <section>
             <div className={'bg-gray-100  py-12'}>
-                <div className={'text-black'}>
-                    <h2 className={'text-3xl'}>Special Discounted Drop Routes</h2>
+                <div className={'font-kanit font-bold text-center text-blue-950'}>
+                    <h2 className={'text-2xl'}>Special Discounted Drop Routes</h2>
                     <p>Book Now & Save More</p>
                 </div>
                 <div className={'bg-gray-100  py-12 tra'}>
