@@ -33,9 +33,9 @@ const Terms_Condition : React.FC= () => {
                     <div className={'mt-5'}>
                         {
                             terms_Conditions.map((term, idx) =>
-                                <div className={'flex'}>
-                                    <li key={idx} className={'text-gray-600'} />
-                                    <p key={idx} className={'text-gray-700 mr-8 '}>{term}</p>
+                                <div key={idx} className={'flex'}>
+                                    <li  className={'text-gray-600'} />
+                                    <p className={'text-gray-700 mr-8 '}>{term}</p>
                                 </div>
                             )}
                     </div>

@@ -1,27 +1,22 @@
 import React from 'react'
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from "./Home.tsx";
+import SelectCab from "./selectCab/SelectCab.tsx";
 import Header from "./header/Header.tsx";
-import LandingPage from "./landingPage/LandingPage.tsx";
-// import ServiceOverall from "./services/ServiceOverall.tsx";
-import Services from "./services/Services.tsx";
-import Traiff from "./traiff/Traiff.tsx";
-import Offer from "./offers/Offer.tsx";
-import Terms_Condition from "./terms_condition/Terms_Condition.tsx";
-import OutStation from "./outstationBooking/OutStation.tsx";
-import PopularDestination from "./destinations/Popular_Destination.tsx";
+import BookCab from "./selectCab/BookCab.tsx";
+
 
 const App:React.FC = () =>{
   return (
-      <div className={''}>
-          <Header />
-          <LandingPage />
-          {/*<ServiceOverall />*/}
-          <Services />
-          <Traiff />
-          <Terms_Condition />
-          <Offer />
-          <OutStation />
-          <PopularDestination />
-      </div>
+        <BrowserRouter>
+            <Header />
+            <Routes>
+                <Route path="/"  element={<Home />} />
+                <Route path="/select-cab"  element={<SelectCab />} />
+                <Route path="/book-cab"  element={<BookCab />} />
+
+            </Routes>
+        </BrowserRouter>
   )
 }
 

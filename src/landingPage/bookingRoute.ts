@@ -1,9 +1,9 @@
 
 interface BookingRoute{
     route: string;
-};
+}
 
-const bookingRoute: BookingRoute[] = [
+export const outstationRoute: BookingRoute[] = [
     {
         route: 'one-way'
     },
@@ -15,4 +15,30 @@ const bookingRoute: BookingRoute[] = [
     },
 ];
 
-export default bookingRoute;
+export const localRoute: BookingRoute[] = [
+    {
+        route: 'half day',
+    },
+    {
+        route: 'full day',
+    }
+];
+
+export const transferRoute: BookingRoute[] = [
+    {
+        route: 'railway station',
+    },
+    {
+        route: 'airport',
+    },
+    {
+        route: 'area/hotel',
+    },
+];
+
+export const dealRoute: BookingRoute[] = [
+    {
+        route: 'oneway deal'
+    }
+];
+
