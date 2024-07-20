@@ -7,17 +7,17 @@ interface CabInfo {
     cabName: string,
     cabPrice: number,
 }
-interface InputInfo {
-    fullName: string,
-    contact: string,
-    email: string,
-    sourceCity? :string,
-    pickUp_Address? :string,
-    drop_Address? :string,
-    pickUp_Date? : string,
-    drop_Date?: string
-    pickUp_Time? :string,
-}
+// interface InputInfo {
+//     fullName: string,
+//     contact: string,
+//     email: string,
+//     sourceCity? :string,
+//     pickUp_Address? :string,
+//     drop_Address? :string,
+//     pickUp_Date? : string,
+//     drop_Date?: string
+//     pickUp_Time? :string,
+// }
 const SelectCab:React.FC = ()=>{
     const [showBooking, setShowBooking] = useState<boolean>(false);
     const [cabInfo, setCabInfo] = useState<CabInfo>({
@@ -25,7 +25,8 @@ const SelectCab:React.FC = ()=>{
         cabPrice: 0,
     });
     // console.log(window.scrollY)
-        const booking  = JSON.parse(localStorage.getItem("bookingInputs"));
+        // @ts-expect-error
+    const booking  = JSON.parse(localStorage.getItem("bookingInputs"));
     const bookingRoute = (localStorage.getItem("bookRoute"));
     const selectBooking = localStorage.getItem("selectBooking");
 
