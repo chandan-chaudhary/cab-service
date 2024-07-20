@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer :React.FC = () => {
     return (
-        <section className={' bg-slate-400'}>
+        <section className={' bg-blue-800'}>
             <footer className="footer p-10">
                 <aside>
                     <svg
@@ -24,7 +24,7 @@ const Footer :React.FC = () => {
                         Book your destination taxi
                     </p>
                 </aside>
-                <nav>
+                <nav className={''}>
                     <h6 className="footer-title">Social</h6>
                     <div className="grid grid-flow-col gap-4">
                         <a>

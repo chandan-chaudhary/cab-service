@@ -5,7 +5,7 @@ import {RxCross2} from "react-icons/rx";
 
 interface BookCabProps {
     showBooking?: boolean,
-    setBooking: React.Dispatch<React.SetStateAction<boolean>>,
+    setBooking?: React.Dispatch<React.SetStateAction<boolean>>,
     cabDetail?: {
         cabName:string, cabPrice: number
     }
@@ -20,7 +20,9 @@ const BookCab = (props: BookCabProps) => {
             <div className={'flex flex-col text-blue-950 bg-white p-7'}>
                 <div className={'flex items-center justify-between'}>
                     <h4 className={'font-bold text-gray-600 uppercase '}>{props.cabDetail?.cabName}</h4>
-                    <RxCross2 onClick={() => props?.setBooking(false)} className={'text-2xl font-extrabold'}/>
+                    <RxCross2 onClick={() => { // @ts-ignore
+                        props.setBooking(false)
+                    }} className={'text-2xl font-extrabold'}/>
                 </div>
                 {/*TOTAL NO OF CAB*/}
                 <div className={'mt-5'}>

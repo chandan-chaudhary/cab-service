@@ -10,7 +10,7 @@ const OutStation: React.FC =() =>{
                 <h3 className={'text-3xl font-bold'}>OutStation Taxi Service</h3>
                 <p className={'pt-2'}>get benefits and more with excellent service</p>
             </div>
-            <div className={'flex flex-col text-blue-950 space-y-12'}>
+            <div className={'grid grid-cols-1 md:grid-cols-2 md:gap-3 place-content-center text-blue-950 sm:max-md:space-y-12 '}>
                 {
                  outStation.map((location, idx) =>
                  <div key={idx} className={'bg-white '}>

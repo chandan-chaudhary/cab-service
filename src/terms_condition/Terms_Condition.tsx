@@ -5,7 +5,7 @@ import {terms_Conditions} from "./sedan.ts";
 const Terms_Condition : React.FC= () => {
     return(
         <section className={'text-black bg-gray-100 px-5 pb-12 '}>
-            <div className={'flex flex-col text-blue-950 space-y-5'}>
+            <div className={'flex flex-col text-blue-950 space-y-5 md:px-12'}>
                 <div className={'text-xl'}>Terms and conditions </div>
                 <div>
                     <h3 className={'text-4xl font-bold font-kanit'}>Points before ur travel</h3>

@@ -5,7 +5,7 @@ import {traiffData} from "./traiff.ts";
 const Traiff :React.FC= () => {
     return(
         <section>
-            <div className={'flex flex-col md:items-center bg-gray-100 px-2 py-20'}>
+            <div className={'flex flex-col md:items-center bg-gray-100 py-20 px-5'}>
                 {/*ONE WAY TRAIFF*/}
                 <div className={''}>
                     <h1 className={'text-3xl font-bold text-black pb-3'}>One Way Traiff</h1>
@@ -14,7 +14,7 @@ const Traiff :React.FC= () => {
                         <tr className={'border-2 border-slate-300 text-white '}>
                             {
                                 traiffData.map((traiff, i) =>
-                                    <th key={i} className={'bg-blue-900 border-x-2 border-white md:p-4 md:px-6'}>{traiff}</th>
+                                    <th key={i} className={'bg-blue-900 border-x-2 border-white md:p-6 md:px-8'}>{traiff}</th>
                                 )
                             }
                         </tr>
@@ -41,7 +41,7 @@ const Traiff :React.FC= () => {
                         <tr className={'border-2 border-slate-300 text-white '}>
                             {
                                 traiffData.map((traiff, i) =>
-                                    <th key={i} className={'bg-blue-900 border-x-2 border-white  md:p-4 md:px-6'}>{traiff}</th>
+                                    <th key={i} className={'bg-blue-900 border-x-2 border-white   md:p-6 md:px-8'}>{traiff}</th>
                                 )
                             }
                         </tr>

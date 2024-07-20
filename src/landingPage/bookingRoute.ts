@@ -5,40 +5,40 @@ interface BookingRoute{
 
 export const outstationRoute: BookingRoute[] = [
     {
-        route: 'one-way'
+        route: 'One Way'
     },
     {
-        route: 'roundtrip'
+        route: 'Roundtrip'
     },
     {
-        route: 'multicity'
+        route: 'Multicity'
     },
 ];
 
 export const localRoute: BookingRoute[] = [
     {
-        route: 'half day',
+        route: 'Half day',
     },
     {
-        route: 'full day',
+        route: 'Full day',
     }
 ];
 
 export const transferRoute: BookingRoute[] = [
     {
-        route: 'railway station',
+        route: 'Railway Station',
     },
     {
-        route: 'airport',
+        route: 'Airport',
     },
     {
-        route: 'area/hotel',
+        route: 'Area/Hotel',
     },
 ];
 
 export const dealRoute: BookingRoute[] = [
     {
-        route: 'oneway deal'
+        route: 'Oneway Deal'
     }
 ];
 

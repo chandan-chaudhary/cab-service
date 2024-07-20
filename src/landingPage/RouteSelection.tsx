@@ -15,34 +15,34 @@ interface routeProps {
 const RouteSelection = (props:routeProps) => {
     return(
         <section>
-            <div className={'flex space-x-5 font-bold  uppercase text-black md:text-xl md:space-x-10'}>
+            <div className={'flex space-x-5 font-bold  md:max-lg:ml-12 uppercase text-black  md:space-x-7 text-center '}>
                 {/*OUTSTATION*/}
                 {
                     props.isSelected === 'outstation' &&
                     outstationRoute.map((route, i) =>
-                        <span key={i} onClick={() => props.setRoute(route.route)}
-                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900 '} pb-2 `}>{route.route}</span>
+                        <div key={i} onClick={() => props.setRoute(route.route)}
+                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900 '} lg:w-36 pb-2 text-center `}>{route.route}</div>
                     )}
                 {/*LOCAL*/}
                 {
                     props.isSelected === 'local' &&
                     localRoute.map((route, i) =>
-                        <span key={i} onClick={() => props.setRoute(route.route)}
-                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900'} pb-2`}>{route.route}</span>
+                        <div key={i} onClick={() => props.setRoute(route.route)}
+                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900'} lg:w-36 pb-2`}>{route.route}</div>
                     )}
                 {/*TRANSFER*/}
                 {
                     props.isSelected === 'transfer' &&
                     transferRoute.map((route, i) =>
-                        <span key={i} onClick={() => props.setRoute(route.route)}
-                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900'} pb-2`}>{route.route}</span>
+                        <div key={i} onClick={() => props.setRoute(route.route)}
+                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900'} lg:w-36 pb-2`}>{route.route}</div>
                     )}
                 {/*DEAL*/}
                 {
                     props.isSelected === 'deal' &&
                     dealRoute.map((route, i) =>
-                        <span key={i} onClick={() => props.setRoute(route.route)}
-                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900'} pb-2`}>{route.route}</span>
+                        <div key={i} onClick={() => props.setRoute(route.route)}
+                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900'} lg:w-36 pb-2`}>{route.route}</div>
                     )}
             </div>
 

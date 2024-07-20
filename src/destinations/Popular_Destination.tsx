@@ -9,7 +9,7 @@ const PopularDestination: React.FC =() =>{
             <div className={' text-blue-950 text-center py-7'}>
                 <h3 className={'text-3xl font-bold'}>Find popular outstation taxi destinations</h3>
             </div>
-            <div className={'flex flex-col text-blue-950 space-y-12'}>
+            <div className={'grid grid-cols-1 md:grid-cols-2 md:gap-3 place-content-center  text-blue-950 sm:max-md:space-y-12'}>
                 {
                     outStation.map((location, idx) =>
                         <div key={idx} className={'bg-white '}>

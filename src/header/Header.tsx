@@ -3,7 +3,7 @@ import React from "react";
 
 const Header: React.FC =() =>{
     return(
-        <div className={'flex items-center justify-between bg-white text-black'}>
+        <div className={'flex items-center justify-between bg-white text-black w-full'}>
             <div className="navbar bg-white py-5">
                 <a className="btn btn-ghost text-xl text-black">Cab Logo</a>
             </div>
