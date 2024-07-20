@@ -30,10 +30,10 @@ const LandingPage:React.FC = () => {
 
     // configure google map places
     const {isLoaded} = useJsApiLoader({
-        googleMapsApiKey:import.meta.env.VITE_GOOGLE_PLACESAPI,
+        googleMapsApiKey:import.meta.env.VITE_GOOGLE_PLACES_API,
         libraries : library
     });
-
+    console.log(import.meta.env.VITE_GOOGLE_PLACES_API)
     // Load autocomplete
     useEffect(()=>{
         if(isLoaded){
