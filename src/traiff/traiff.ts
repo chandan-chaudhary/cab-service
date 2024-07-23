@@ -5,7 +5,7 @@ interface VehicleInfo{
     vehicleName:string,
     price: number,
     driverBata: number,
-    additionalCharge?:string,
+    additionalCharge?:string | number,
 }
 
 export const traiffData = ['Vehicle Type', 'Rate KM/H', 'Driver Bata', 'Additional Charges'];

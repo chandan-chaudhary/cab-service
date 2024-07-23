@@ -24,7 +24,10 @@ export default {
     extend: {
       fontFamily:{
         kanit: ["Kanit", 'sans-serif'],
-      }
+      },
+      backgroundImage :{
+        'travel': `url('../assets/travel1.webp')`,
+      },
     },
   },
   plugins: [daisyui],
