@@ -1,11 +1,11 @@
 // import React from 'react'
 
-import { useState } from "react";
+// import { useState } from "react";
 import { RiDeleteBin5Line } from "react-icons/ri";
 
 function PromoCode() {
 
-  const [deletePromo, setDeletePromo] = useState<string>('');
+  // const [deletePromo, setDeletePromo] = useState<string>('');
   const handlePromo = ():string=>{
     return 'hidden'
   }
