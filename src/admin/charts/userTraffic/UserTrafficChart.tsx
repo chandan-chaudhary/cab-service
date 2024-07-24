@@ -1,5 +1,6 @@
 // import React from 'react'
-import { earningChart } from './earnings'
+import { userTrafficChart } from './userTraffic';
+
 import { Line } from 'react-chartjs-2'
 import { Chart as ChartJs, CategoryScale, LinearScale, PointElement, LineElement, Title,
     Tooltip, Legend
@@ -8,11 +9,13 @@ import { Chart as ChartJs, CategoryScale, LinearScale, PointElement, LineElement
  ChartJs.register(CategoryScale, LinearScale, PointElement, LineElement, Title,
     Tooltip, Legend)
 
-function Earnings() {
-    const options = {}
+
+
+
+function UserTrafficChart() {
   return (
-    <div className='bg-white p-5'><Line options={options} data={earningChart}/></div>
+    <div className='p-4 w-full bg-white my-4'><Line options={{}} data={userTrafficChart}/></div>
   )
 }
 
-export default Earnings
+export default UserTrafficChart;

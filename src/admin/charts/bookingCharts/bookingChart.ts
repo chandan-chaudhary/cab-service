@@ -1,15 +1,16 @@
 
 
-const bookingchart = {
+export const bookingChart = {
     labels:[
-        'Jan',
-        'Feb'
+       'Total', 'Confirm', 'Pending', 'Cancled'
     ],
 
     datasets:[
         {
             label: 'Bookings',
-            data:[]
+            data:[2000, 1500, 400, 100,],
+            backgroundColor: ['blue', 'green', 'pink', 'red'],
+            hoverOffset: 4,
         }
     ]
-}
+};

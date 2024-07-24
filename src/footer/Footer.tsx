@@ -1,10 +1,12 @@
 
 
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Footer :React.FC = () => {
+    const navigate = useNavigate();
     return (
-        <section className={' bg-blue-800'}>
+        <section className={' bg-blue-950'}>
             <footer className="footer p-10">
                 <aside>
                     <svg
@@ -23,6 +25,8 @@ const Footer :React.FC = () => {
                         <br/>
                         Book your destination taxi
                     </p>
+
+                    <p onClick={() => navigate('/admin')}>Adminstration</p>
                 </aside>
                 <nav className={''}>
                     <h6 className="footer-title">Social</h6>

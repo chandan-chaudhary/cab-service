@@ -5,8 +5,9 @@ import SelectCab from "./selectCab/SelectCab.tsx";
 import Header from "./header/Header.tsx";
 import BookCab from "./selectCab/BookCab.tsx";
 import Admin from './admin/Admin.tsx';
-import BookingDetails from './admin/BookingDetails.tsx';
+import BookingDetails from './admin/charts/bookingCharts/BookingDetails.tsx';
 import TraiffDetails from './admin/TraiffDetails.tsx';
+import Footer from "./footer/Footer.tsx";
 
 
 const App:React.FC = () =>{
@@ -21,6 +22,7 @@ const App:React.FC = () =>{
                 <Route path="/admin/booking-details" element={<BookingDetails />}/>
                 <Route path="/admin/traiff-details" element={<TraiffDetails />}/>
             </Routes>
+            <Footer />
         </BrowserRouter>
   )
 }

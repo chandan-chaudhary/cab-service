@@ -10,7 +10,6 @@ import Offer from "./offers/Offer.tsx";
 import Terms_Condition from "./terms_condition/Terms_Condition.tsx";
 import OutStation from "./outstationBooking/OutStation.tsx";
 import PopularDestination from "./destinations/Popular_Destination.tsx";
-import Footer from "./footer/Footer.tsx";
 
 const Home:React.FC = () =>{
     return (
@@ -22,7 +21,6 @@ const Home:React.FC = () =>{
             <Offer />
             <OutStation />
             <PopularDestination />
-            <Footer />
         </div>
     )
 }
