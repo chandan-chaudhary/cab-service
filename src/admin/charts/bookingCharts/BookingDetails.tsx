@@ -35,6 +35,8 @@ const BookingDetails =()=> {
                     <p>outstation | one-way</p>
                     <p>4 Seats </p>
                     <p>Pickup Date: 12/12/12</p>
+                    <p>Amount: <span className="font-bold ">rs. 25000</span></p>
+                    <p>patna to raipur</p>
                 </div>
                 <div className='flex items-center justify-between space-x-10 '>
                     <div>
@@ -44,10 +46,9 @@ const BookingDetails =()=> {
                             <p className=""> 6200000000 </p>
                         </div>
                         <p> chandan@hotmail.com</p>
-                        <p>patna to raipur</p>
                     </div>
                     {
-                        assignCab === 'canceled' ? <RiDeleteBin5Line onClick={() =>setShowBooking(false)}className="text-4xl"/> :
+                        assignCab === 'canceled' ? <RiDeleteBin5Line onClick={() =>setShowBooking(false)} className="text-4xl"/> :
                         <div className="flex flex-col space-y-2 ">
                             {
                                 assignCab ==='confirmed' ? 

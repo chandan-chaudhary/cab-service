@@ -5,7 +5,7 @@ import {traiffData} from "./traiff.ts";
 const Traiff :React.FC= () => {
     return(
         <section>
-            <div className={'flex flex-col md:items-center bg-gray-100 py-20 px-5'}>
+            <div className={'flex flex-col xl:flex-row md:items-center justify-center space-x-5 bg-gray-100 py-20 px-5'}>
                 {/*ONE WAY TRAIFF*/}
                 <div className={''}>
                     <h1 className={'text-3xl font-bold text-black pb-3'}>One Way Traiff</h1>
@@ -34,7 +34,7 @@ const Traiff :React.FC= () => {
                     </table>
                 </div>
                 {/*ROUNDTRIP TRAIFF*/}
-                <div className={'pt-16'}>
+                <div className={'sm:max-lg:pt-16'}>
                     <h1 className={'text-3xl font-bold text-black pb-3'}>RoundTrip Traiff</h1>
                     <table className={'border-2 border-slate-300 text-center'}>
                         <thead>

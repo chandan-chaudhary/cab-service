@@ -89,7 +89,7 @@ const LandingPage:React.FC = () => {
 
                 {/*IMAGES*/}
             {/*<div className={'xl:pl-12  flex '}>*/}
-                <img src={touristImg} alt={'tourist img'} className={'opacity-70 lg:absolute xl:right-10 lg:-right-52 -bottom-60   md:max-xl:w-8/12  '}/>
+                <img src={touristImg} alt={'tourist img'} className={'opacity-70 lg:absolute xl:-right-5 lg:-right-52 -bottom-60   md:max-xl:w-8/12 xl:w-6/12 '}/>
             {/*</div>*/}
         </div>
         </section>
