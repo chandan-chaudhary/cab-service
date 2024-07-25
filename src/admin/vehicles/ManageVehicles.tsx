@@ -16,6 +16,12 @@ function ManageVehicles() {
   return (
     <section>
             <div className='bg-gray-100  text-blue-950 py-12 px-2'>
+
+                {/* all vehicles */}
+                <div className=''>
+                    <h4 className='text-center font-bold text-3xl uppercase'>Vehicles</h4>
+                    <AllVehicles />
+                </div>
               
                 <form className={` ${editMode === '' && 'hidden'} flex flex-col space-y-3 p-5 rounded-lg border-2 border-gray-400 `}>
                 <div className='flex justify-center p-4 text-2xl font-bold uppercase'>
@@ -72,10 +78,6 @@ function ManageVehicles() {
                     <button onClick={() =>handleEditMode('remove')} className={`${editMode === 'remove' && 'hidden'} bg-red-500 w-32 mt-5 text-center p-3 rounded-lg uppercase font-bold text-white`}>remove</button>
                 </div>
 
-                {/* all vehicles */}
-                <div>
-                    <AllVehicles />
-                </div>
             </div>
 
     </section>

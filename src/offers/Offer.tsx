@@ -10,13 +10,13 @@ const Offer:React.FC =()=>{
     // const handleOffer = (i:number) =>{
     //     setCurrentIndex(i);
     // };
-    console.log(window.screen.availWidth >=1024 , 'screen')
+    // console.log(window.screen.availWidth >=1024 , 'screen')
 
     const settings = {
         dots: true,
         infinite: true,
         speed: 900,
-        slidesToShow: window.screen.availWidth >=1024 ? 2: 1 ,
+        slidesToShow: window.screen.availWidth >= 1024 ? 2: 1 ,
         slidesToScroll: 1
     };
     return(
@@ -26,17 +26,17 @@ const Offer:React.FC =()=>{
                     <h2 className={'text-2xl'}>Special Discounted Drop Routes</h2>
                     <p>Book Now & Save More</p>
                 </div>
-                <div className={'px-5 py-12  md:px-24 lg:px-12  '}>
+                <div className={'flex flex-col  px-5 py-12  md:px-44  '}>
                     <Slider {...settings} >
                     {
                     offerInfo.map((offer, idx) =>
 
                         <div key={idx}
-                             className={'flex flex-col  gap-x-4 py-8 text-center space-y-4 text-black bg-white rounded-2xl mt-5   font-kanit border-2'}>
+                             className={'flex flex-col  py-8 text-center space-y-4 text-black bg-white rounded-2xl mt-5 font-kanit border-2'}>
                             {/*<div>*/}
-                                <h2 className={'text-2xl font-bold font-kanit'}>{offer.route}</h2>
-                                <h1 className={'text-blue-500 font-bold text-4xl '}>{offer.price}</h1>
-                                <ul className={'flex flex-col text-black text-xl text-start pl-16 list-disc'}>
+                                <h2 className={'text-xl font-bold font-kanit'}>{offer.route}</h2>
+                                <h1 className={'text-blue-500 font-bold text-2xl '}>{offer.price}</h1>
+                                <ul className={'flex flex-col text-black text-sm text-start pl-16 list-disc'}>
                                     <li>car type: {offer.vehicleType}</li>
                                     <li>Total KM(covered): {offer.totalKM}KM</li>
                                     <li>Extra Rate Per KM: {offer.extraRate}</li>

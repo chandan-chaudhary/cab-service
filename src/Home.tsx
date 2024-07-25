@@ -13,7 +13,7 @@ import PopularDestination from "./destinations/Popular_Destination.tsx";
 
 const Home:React.FC = () =>{
     return (
-        <div className={''}>
+        <div className={'bg-gray-100'}>
             <LandingPage />
             <Services />
             <Traiff />

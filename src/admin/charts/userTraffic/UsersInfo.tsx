@@ -6,9 +6,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 
 function UsersInfo() {
-
     const navigate = useNavigate();
-
   return (
     <div>
          <div  onClick={()=> navigate('/admin/manage-users')}   className="bg-gray-700 text-white rounded-lg border-2 border-gray-700 p-6 w-96 cursor-pointer hover:scale-110 ease-in-out duration-500">
