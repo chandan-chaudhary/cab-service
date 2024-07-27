@@ -16,4 +16,4 @@ function RouteManager() {
   )
 }
 
-export default RouteManager
+export default RouteManager;

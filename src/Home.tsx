@@ -10,7 +10,7 @@ import Offer from "./offers/Offer.tsx";
 import Terms_Condition from "./terms_condition/Terms_Condition.tsx";
 import OutStation from "./outstationBooking/OutStation.tsx";
 import PopularDestination from "./destinations/Popular_Destination.tsx";
-import CheckoutBooking from './payments/CheckoutBooking.tsx';
+// import CheckoutBooking from './payments/CheckoutBooking.tsx';
 
 const Home:React.FC = () =>{
     return (
