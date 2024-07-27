@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {FaCarAlt, FaCaretDown, FaCaretUp} from "react-icons/fa";
 import {FaCreditCard} from "react-icons/fa6";
 import {RxCross2} from "react-icons/rx";
+import { useNavigate } from "react-router-dom";
 
 interface BookCabProps {
     showBooking?: boolean,
@@ -14,7 +15,7 @@ const BookCab = (props: BookCabProps) => {
     const [count, setCount] = useState<number>(1);
     const [pay, setPay] = useState<number>(25);
    // const topMargin = (Math.round(window.scrollY))+'px';
-
+  const navigate = useNavigate();
     return (
         <div className={`absolute top-36 left-10 w-72 backdrop-blur-xl ${props?.showBooking || 'hidden'}`}>
             <div className={'flex flex-col text-blue-950 bg-white p-7'}>
@@ -70,7 +71,7 @@ const BookCab = (props: BookCabProps) => {
                         </div>
                     </div>
                 </div>
-                <button className={'bg-yellow-500 p-3 uppercase text-white font-bold mt-3'}>book cab</button>
+                <button onClick={() => navigate('/pay&book')} className={'bg-yellow-500 p-3 uppercase text-white font-bold mt-3'}>book cab</button>
             </div>
         </div>
     )

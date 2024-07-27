@@ -8,7 +8,7 @@ function BookingPage() {
     const navigate = useNavigate();
 
   return (
-    <div className='sm:max-md:pt-44 pb-16 sm:w-96 md:7/12 lg:w-fit  '>
+    <div className='sm:max-md:pt-44 pb-16 sm:w-96 md:7/12 lg:w-8/12  '>
         <div className="bg-white text-blue-950 rounded-lg border-t-8 border-blue-900  cursor-pointer drop-shadow-2xl">
             <div className=" flex items-center justify-center space-x-8 font-bold text-2xl text-center uppercase py-5">
                   <img src={bookingIcon} alt="booking-Icon" className='w-20' />

@@ -20,6 +20,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* REmove default arrow and spinner  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /*a {*/
 /*  font-weight: 500;*/
 /*  color: #646cff;*/

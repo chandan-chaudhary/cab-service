@@ -24,7 +24,7 @@ const LandingPage:React.FC = () => {
     const [isSelected, setIsSelected] = useState<string>('outstation');
     const [isRoute, setIsRoute] = useState<string>('One Way');
     const [autoComplete, setAutoComplete] = useState<google.maps.places.Autocomplete | null>(null)
-    console.log(autoComplete)
+    console.log('autocomplete', autoComplete)
     // REF
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -33,7 +33,7 @@ const LandingPage:React.FC = () => {
         googleMapsApiKey:import.meta.env.VITE_GOOGLE_PLACES_API,
         libraries : library
     });
-    console.log(import.meta.env.VITE_GOOGLE_PLACES_API)
+    // console.log(import.meta.env.VITE_GOOGLE_PLACES_API)
     // Load autocomplete
     useEffect(()=>{
         if(isLoaded){
@@ -89,7 +89,7 @@ const LandingPage:React.FC = () => {
 
                 {/*IMAGES*/}
             {/*<div className={'xl:pl-12  flex '}>*/}
-                <img src={touristImg} alt={'tourist img'} className={'opacity-70 lg:absolute lg:-right-10 top-[300px]  lg:w-7/12 '}/>
+                <img src={touristImg} alt={'tourist img'} className={'opacity-70 lg:absolute lg:-right-10 lg:top-[300px]  lg:w-6/12 '}/>
             {/*</div>*/}
         </div>
         </section>

@@ -15,26 +15,26 @@ import traiffIcon from '../assets/admin/traiff.png';
 
 
 // style={{backgroundImage: `url(${travel})`}}
-const  Admin = ()=> {
-    const navigate = useNavigate();
+const Admin = () => {
+  const navigate = useNavigate();
   return (
     <section>
-        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-y-20 place-items-center mx-auto bg-gray-100  text-blue-950 sm:max-md:gap-y-5 items-center lg:items-start py-24 pt-44`}>
-            {/* BOOKING */}
-            <BookingPage />
+      <div className={`grid grid-cols-1 lg:grid-cols-2 gap-y-20 place-items-center mx-auto bg-gray-100  text-blue-950 sm:max-md:gap-y-5 items-center lg:items-start py-24 pt-44`}>
+        {/* BOOKING */}
+        <BookingPage />
 
-            {/* VEHICLES  */}
-            <VehiclesPage />
-           
-            {/* PROMOCODE */}
-            <PromoCode />
+        {/* VEHICLES  */}
+        <VehiclesPage />
 
-            {/* TRAIFF */}
-            <div className='sm:max-md:pt-44 pb-16 sm:w-96 md:w-7/12 lg:w-9/12 '>
-        <div className="bg-white text-blue-950 rounded-lg border-t-8 border-blue-900  cursor-pointer drop-shadow-2xl">
-            <div className=" flex items-center justify-center space-x-8 font-bold text-2xl text-center uppercase py-5">
-                  <img src={traiffIcon} alt="booking-Icon" className='w-20' />
-                <h3>traiffs</h3>
+        {/* PROMOCODE */}
+        <PromoCode />
+
+        {/* TRAIFF */}
+        <div className='sm:max-md:pt-44 pb-16 sm:w-96 md:w-7/12 lg:w-8/12 '>
+          <div className="bg-white text-blue-950 rounded-lg border-t-8 border-blue-900  cursor-pointer drop-shadow-2xl">
+            <div className=" flex items-center justify-center space-x-8  font-bold text-2xl text-center uppercase py-5 mb-36">
+              <img src={traiffIcon} alt="booking-Icon" className='w-20' />
+              <h3>traiffs</h3>
             </div>
             {/*  */}
             {/* <div className='flex text-center justify-center items-center space-x-5 py-5 text-xl px-6 font-bold  '>
@@ -50,15 +50,15 @@ const  Admin = ()=> {
                 </div>
             </div> */}
             {/* BOOKING CHART */}
-                {/* <BookingChart /> */}
-                <div className='flex items-center text-red-500 font-bold hover:scale-95 ease-in-out duration-500 border-t-2 px-6 p-3'>
-                  <button onClick={()=> navigate('/admin/booking-details')} className=" text-xl hover:underline underline-offset-2"> view all Bookings </button>
-                  <IoIosArrowRoundForward className='text-3xl' />
-                </div>
-                
+            {/* <BookingChart /> */}
+            <div className='flex items-center text-red-500 font-bold hover:scale-95 ease-in-out duration-500 border-t-2 px-6 p-3'>
+              <button onClick={() => navigate('/admin/traiff-details')} className=" text-xl hover:underline underline-offset-2"> view all traiffs </button>
+              <IoIosArrowRoundForward className='text-3xl' />
+            </div>
+          </div>
         </div>
-    </div>
-        </div>
+         
+      </div>
 
     </section>
   )

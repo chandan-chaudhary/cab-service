@@ -8,7 +8,7 @@ import vehicleIcon from '../../assets/admin/booking.png';
 function VehiclesPage() {
     const navigate = useNavigate();
     return (
-      <div className='sm:max-md:pt-44 pb-16 sm:w-96 md:7/12 lg:w-fit  '>
+      <div className='sm:max-md:pt-44 pb-16 sm:w-96 md:7/12 lg:w-8/12  '>
       <div className="bg-white text-blue-950 rounded-lg border-t-8 border-blue-900  cursor-pointer drop-shadow-2xl">
           <div className=" flex items-center justify-center space-x-8 font-bold text-2xl text-center uppercase py-5">
                 <img src={vehicleIcon} alt="booking-Icon" className='w-20' />
@@ -29,7 +29,7 @@ function VehiclesPage() {
           {/* BOOKING CHART */}
               {/* <BookingChart /> */}
               <div className='flex items-center text-red-500 font-bold hover:scale-95 ease-in-out duration-500 border-t-2 px-6 p-3'>
-                <button onClick={()=> navigate('/admin/vehicle-details')} className=" text-xl hover:underline underline-offset-2"> view all Bookings </button>
+                <button onClick={()=> navigate('/admin/vehicle-details')} className=" text-xl hover:underline underline-offset-2"> view all vehicles </button>
                 <IoIosArrowRoundForward className='text-3xl' />
               </div>
               

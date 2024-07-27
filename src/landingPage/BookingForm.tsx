@@ -1,5 +1,9 @@
 import {useNavigate} from "react-router-dom";
 import React, {RefObject, useState} from "react";
+import suvImg from '../assets/vehicles/suv.png';
+import sedanImg from '../assets/vehicles/sedan.png';
+import { LuPlus } from "react-icons/lu";
+
 
 interface routeProps {
     isRoute?: string,
@@ -14,7 +18,7 @@ interface InputInfo {
     email: string,
     sourceCity? :string,
     pickUp_Address? :string,
-    drop_Address? :string,
+    // drop_Address?: string[],
     pickUp_Date? : string,
     drop_Date?: string
     pickUp_Time? :string,
@@ -27,14 +31,20 @@ const BookingForm = (props: routeProps) => {
         email: ' ',
         sourceCity: "",
         pickUp_Address: "",
-        drop_Address: "",
+        // drop_Address: [],
         pickUp_Date: '',
         drop_Date: ' ',
         pickUp_Time: '',
     })
+    const [multipleDestination, setMultipleDestination] = useState<string[]>([]);
+
+    const [otherDropAddress, setOtherDropAddress] = useState<boolean>(false)
     const navigate = useNavigate()
     // console.log(inputs)
+    console.log(props.isRoute);
+
     return (
+        
         <section>
             <div className={''}>
                 <div className={'flex flex-col bg-blue-900  space-y-4 py-5 border-t-4 border-orange-500 '}>
@@ -67,7 +77,7 @@ const BookingForm = (props: routeProps) => {
 
                         </div>
                         <div className={'flex flex-col'}>
-                            <label htmlFor={'email'}>Email (optional)</label>
+                            <label htmlFor={'email'}>Email</label>
                             <input type={'email'} name={'email'} placeholder={'your email'}
                                    className={'p-1 pl-3   outline-none bg-white text-black'} value={inputs.email}
                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInputs({
@@ -97,13 +107,25 @@ const BookingForm = (props: routeProps) => {
                         <div className={`flex flex-col ${props.isSelected === 'local' && 'hidden'}`}>
                             <label htmlFor={'destination city'}>Drop Address</label>
                             <input type={'text'} placeholder={'Drop location'} name={'destination city'}
-                                   className={'p-1 pl-3  outline-none bg-white text-black'} value={inputs.drop_Address}
-                                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInputs({
-                                       ...inputs,
-                                       drop_Address: e.target.value
-                                   })}/>
+                                   className={'p-1 pl-3  outline-none bg-white text-black'}
+                                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMultipleDestination([
+                                       ...multipleDestination,   e.target.value ])}/>
                         </div>
                         {/*MULTICITY DIV*/}
+                        {
+                            props.isRoute === 'Multicity' &&
+                            <div>
+                                <div className="flex justify-end ">
+                                    <button onClick={() => setOtherDropAddress(true)} className="p-0.5 text-white rounded-full border-2 border-white text-xl mr-5"><LuPlus /></button>
+                                </div>
+                                <div className={`flex flex-col ${otherDropAddress || 'hidden'} `}>
+                                    <label htmlFor={'destination city'}>Drop Address</label>
+                                    <input type={'text'} placeholder={'Drop location'} name={'destination city'}
+                                        className={'p-1 pl-3  outline-none bg-white text-black'} 
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setMultipleDestination([...multipleDestination, e.target.value])}/>
+                                </div>
+                            </div>
+                        }
                         {/* DATE AND TIME SELECTION*/}
                         <div className={'flex flex-col'}>
                             <label htmlFor={'start date'}>PickUp Date</label>
@@ -139,8 +161,37 @@ const BookingForm = (props: routeProps) => {
                                 </div>
                             </>
                         }
+                        <div className="flex flex-col space-y-2 sm:pt-3">
+                            <h5>Please select a cab</h5>
+                            <div className="flex space-x-8 justify-center items-center">
+                                <div className="flex flex-col w-12 items-center">
+                                    <p className="text-[12px]">17 ₹ / km</p>
+                                    <img src={sedanImg} alt="suv-icon" className=""/>
+                                    <p className="uppercase text-[12px]">sedan</p>
+                                </div>
+                                <div className="flex flex-col w-12 items-center">
+                                    <p className="text-[12px]">17 ₹ / km</p>
+                                    <img src={suvImg} alt="suv-icon" className=""/>
+                                    <p className="uppercase text-[12px]">etios</p>
+                                </div>
+                                <div className="flex flex-col w-12 items-center">
+                                    <p className="text-[12px]">17 ₹ / km</p>
+                                    <img src={sedanImg} alt="suv-icon" className=""/>
+                                    <p className="uppercase text-[12px]">toyota</p>
+                                </div>
+                                <div className="flex flex-col w-12 items-center">
+                                    <p className="text-[12px]">17 ₹ / km</p>
+                                    <img src={suvImg} alt="suv-icon" className=""/>
+                                    <p className="uppercase text-[12px]">suv</p>
+                                </div>
+
+                                {/* <img src={suvImg} alt="suv-icon" />
+                                <img src={sedanImg} alt="suv-icon" />
+                                <img src={suvImg} alt="suv-icon" /> */}
+                            </div>
+                        </div>
                         <button onClick={() => {
-                            console.log(inputs);
+                            console.log(inputs, multipleDestination);
                             localStorage.setItem('bookingInputs', JSON.stringify(inputs));
                             localStorage.setItem('bookRoute', (props.isRoute) as string);
                             localStorage.setItem('selectBooking', (props.isSelected) as string);

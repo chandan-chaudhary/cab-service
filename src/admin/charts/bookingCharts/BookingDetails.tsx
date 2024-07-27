@@ -17,8 +17,6 @@ const BookingDetails = () => {
                     <BookingCard />
                     <BookingCard /> 
                 </div>
-                
-
                 {/* assign another  */}
                 {/* <div className='flex flex-col border-2 border-gray-300 bg-white rounded-lg space-y-6 p-5 my-5'>
                     <div className='flex flex-col  '>
