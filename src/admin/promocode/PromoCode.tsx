@@ -32,7 +32,7 @@ function PromoCode() {
           <h6 onClick={() => setShowAddPromo(!showAddPromo)} className="text-end px-12 text-teal-700 underline text-md pb-3">{showAddPromo ? 'add promo':'hide promo'}</h6>
 
           {/* ADD PROMO */}
-          <div className={` ${showAddPromo && 'hidden'} flex flex-col text-xl space-y-3 font-bold border-t-2 py-3 px-5 ease-in-out duration-500`}>
+          <div className={` ${showAddPromo && 'hidden'} flex flex-col text-xl space-y-3 font-bold border-t-2 py-3 px-5  duration-500`}>
             <label htmlFor="promo">Add Promo</label>
             <input type="text" name="promo" placeholder="eg: JWT5IO" className="outline-none rounded-lg bg-inherit p-1 pl-3 border-2 border-blue-800"/>
             <button className="p-3 bg-teal-500 text-white uppercase mt-5 rounded-lg hover:scale-95 ease-in-out duration-500">Add</button>

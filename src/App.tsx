@@ -11,6 +11,7 @@ import Footer from "./footer/Footer.tsx";
 import ManageVehicles from './admin/vehicles/ManageVehicles.tsx';
 import CheckoutBooking from './payments/CheckoutBooking.tsx';
 import Login from './admin/Login.tsx';
+import RouteManager from './admin/routeManager/RouteManager.tsx';
 
 
 const App:React.FC = () =>{
@@ -30,6 +31,7 @@ const App:React.FC = () =>{
                 <Route path="/admin/booking-details" element={<BookingDetails />}/>
                 <Route path="/admin/traiff-details" element={<TraiffDetails />}/>
                 <Route path="/admin/vehicle-details" element={<ManageVehicles />}/>
+                <Route path="/admin/route-details" element={<RouteManager />}/>
             </Routes>
             <Footer />
         </BrowserRouter>
