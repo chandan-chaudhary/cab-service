@@ -24,7 +24,7 @@ const Traiff :React.FC= () => {
                             vehicleInfo.map((vehicle, i) =>
                                 <tr key={i} className={'border-2 border-slate-300 text-gray-700'}>
                                     <td className={'border-2 border-slate-300 uppercase p-2 text-lg'}>{vehicle.vehicleType}</td>
-                                    <td className={'border-2 border-slate-300 p-2 text-lg'}>₹{vehicle.ratePerKm}/KM</td>
+                                    <td className={'border-2 border-slate-300 p-2 text-lg'}>₹{vehicle.ratePerKM}/KM</td>
                                     <td className={'border-2 border-slate-300 p-2 text-lg'}>₹{vehicle.driverBata}</td>
                                     <td className={'border-2 border-slate-300 p-2 text-lg'}>{vehicle.additionalCharge}</td>
                                 </tr>
@@ -51,7 +51,7 @@ const Traiff :React.FC= () => {
                             vehicleInfo.map((vehicle, i) =>
                                 <tr key={i} className={'border-2 border-slate-300 text-gray-700'}>
                                     <td className={'border-2 border-slate-300 uppercase p-2 xl:text-lg'}>{vehicle.vehicleType}</td>
-                                    <td className={'border-2 border-slate-300 p-2 xl:text-lg'}>₹{vehicle.ratePerKm}/KM</td>
+                                    <td className={'border-2 border-slate-300 p-2 xl:text-lg'}>₹{vehicle.ratePerKM}/KM</td>
                                     <td className={'border-2 border-slate-300 p-2 xl:text-lg'}>₹{vehicle.driverBata}</td>
                                     <td className={'border-2 border-slate-300 p-2 xl:text-lg'}>{vehicle.additionalCharge}</td>
                                 </tr>

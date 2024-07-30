@@ -63,7 +63,7 @@ const SelectCab:React.FC = ()=>{
                                 <h5 className={'text-xl'}>Rs. {cab.totalFare}</h5>
                                 <a href={'/fair-detail'} className={'underline font-normal text-red-400'}>fair details</a>
                                 <button onClick={() => {
-                                    setShowBooking(true); setCabInfo({cabName: cab.vehicleName, cabPrice: cab.totalFare});
+                                    setShowBooking(true); setCabInfo({cabName: cab.vehicleName, cabPrice: cab.price_Km});
                                 }} className={'bg-yellow-500 uppercase p-3 font-bold rounded-lg'}>select cab</button>
                             </div>
                     </div>
