@@ -3,11 +3,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface BookingRouteProps {
-  [key: string]: boolean
+  route: string
+  isActive: boolean
 }
 
 interface bookRoute {
-    bookingRoute:BookingRouteProps
+    bookingRoute: BookingRouteProps[]
 }
 const initialState : bookRoute= {
   bookingRoute: []
@@ -25,6 +26,7 @@ export const bookingSlice = createSlice({
     // },
     reducers: {
         bookingRouteState :(state, action:PayloadAction<BookingRouteProps>) =>{
+          if(state.bookingRoute.map((e) => e !== action.payload) ) 
             state.bookingRoute.push(action.payload);
         }
     }

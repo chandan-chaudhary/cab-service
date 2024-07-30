@@ -8,7 +8,7 @@ interface BookCabProps {
     showBooking?: boolean,
     setBooking?: React.Dispatch<React.SetStateAction<boolean>>,
     cabDetail?: {
-        cabName:string, cabPrice: number
+        cabName:string, cabPrice: number | string
     }
 }
 const BookCab = (props: BookCabProps) => {

@@ -11,10 +11,10 @@ const Traiff :React.FC= () => {
                     <h1 className={'text-xl font-bold text-black pb-3'}>One Way Traiff</h1>
                     <table className={'border-2 border-slate-300 text-center '}>
                         <thead>
-                        <tr className={'border-2 border-slate-300 text-white '}>
+                        <tr className={'border-2 border-slate-300 text-white'}>
                             {
                                 traiffData.map((traiff, i) =>
-                                    <th key={i} className={'bg-blue-900 border-x-2 border-white md:p-8 xl:p-3'}>{traiff}</th>
+                                    <th key={i} className={'bg-blue-900 border-x-2 border-white md:p-8 xl:p-3 text-xl '}>{traiff}</th>
                                 )
                             }
                         </tr>
@@ -22,11 +22,11 @@ const Traiff :React.FC= () => {
                         <tbody>
                         {
                             vehicleInfo.map((vehicle, i) =>
-                                <tr key={i} className={'border-2 border-slate-300 text-gray-700 '}>
-                                    <td className={'border-2 border-slate-300 uppercase p-2 '}>{vehicle.vehicleName}</td>
-                                    <td className={'border-2 border-slate-300 p-2 '}>₹{vehicle.price}/KM</td>
-                                    <td className={'border-2 border-slate-300 p-2 '}>₹{vehicle.driverBata}</td>
-                                    <td className={'border-2 border-slate-300 p-2 '}>{vehicle.additionalCharge}</td>
+                                <tr key={i} className={'border-2 border-slate-300 text-gray-700'}>
+                                    <td className={'border-2 border-slate-300 uppercase p-2 text-lg'}>{vehicle.vehicleType}</td>
+                                    <td className={'border-2 border-slate-300 p-2 text-lg'}>₹{vehicle.ratePerKm}/KM</td>
+                                    <td className={'border-2 border-slate-300 p-2 text-lg'}>₹{vehicle.driverBata}</td>
+                                    <td className={'border-2 border-slate-300 p-2 text-lg'}>{vehicle.additionalCharge}</td>
                                 </tr>
                             )
                         }
@@ -41,7 +41,7 @@ const Traiff :React.FC= () => {
                         <tr className={'border-2 border-slate-300 text-white '}>
                             {
                                 traiffData.map((traiff, i) =>
-                                    <th key={i} className={'bg-blue-900 border-x-2 border-white md:p-8 xl:p-3'}>{traiff}</th>
+                                    <th key={i} className={'bg-blue-900 border-x-2 border-white md:p-8 xl:p-3 xl:text-xl '}>{traiff}</th>
                                 )
                             }
                         </tr>
@@ -50,10 +50,10 @@ const Traiff :React.FC= () => {
                         {
                             vehicleInfo.map((vehicle, i) =>
                                 <tr key={i} className={'border-2 border-slate-300 text-gray-700'}>
-                                    <td className={'border-2 border-slate-300 uppercase p-2'}>{vehicle.vehicleName}</td>
-                                    <td className={'border-2 border-slate-300 p-2'}>₹{vehicle.price}/KM</td>
-                                    <td className={'border-2 border-slate-300 p-2'}>₹{vehicle.driverBata}</td>
-                                    <td className={'border-2 border-slate-300 p-2'}>{vehicle.additionalCharge}</td>
+                                    <td className={'border-2 border-slate-300 uppercase p-2 xl:text-lg'}>{vehicle.vehicleType}</td>
+                                    <td className={'border-2 border-slate-300 p-2 xl:text-lg'}>₹{vehicle.ratePerKm}/KM</td>
+                                    <td className={'border-2 border-slate-300 p-2 xl:text-lg'}>₹{vehicle.driverBata}</td>
+                                    <td className={'border-2 border-slate-300 p-2 xl:text-lg'}>{vehicle.additionalCharge}</td>
                                 </tr>
                             )
                         }

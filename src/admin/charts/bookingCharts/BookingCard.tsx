@@ -31,7 +31,7 @@ function BookingCard() {
                         <div className="flex flex-col space-y-1 px-5 py-2">
                             <p className="text-xl font-bold uppercase ">city   ------------------------city</p>
                             <p>16/12 , 20:10</p>
-                            <p><span className="font-bold ">₹ 25000</span></p>
+                            <p><span className="font-bold text-2xl text-blue-800">₹ 25000</span></p>
                         </div>
                     </div>
                     <div className='flex items-end justify-between space-x-10 px-5 pb-3 '>
@@ -44,7 +44,7 @@ function BookingCard() {
                         </div>
                         {
                             assignCab === 'canceled' ? <RiDeleteBin5Line onClick={() => setShowBooking(false)} className="text-4xl" /> :
-                                <div className="flex flex-col space-y-2 ">
+                                <div className="flex flex-col md:flex-row sm:max-md:space-y-2 md:space-x-5 ">
                                     {
                                         assignCab === 'confirmed' ?
                                             <RiDeleteBin5Line onClick={() => setShowBooking(false)} className="text-4xl" />

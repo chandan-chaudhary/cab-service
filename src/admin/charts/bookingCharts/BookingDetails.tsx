@@ -5,13 +5,13 @@ const BookingDetails = () => {
 
     return (
         <section>
-            <div className='bg-gray-100 text-blue-950 px-5 py-12 '>
-                <div className='flex items-center pt-5'>
-                    <h3 className='text-xl font-bold uppercase'>Bookings </h3>
+            <div className='flex flex-col items-center bg-gray-100 text-blue-950 px-5 py-12 '>
+                <div className='flex items-center pt-5 md:mb-12 lg:my-12'>
+                    <h3 className='text-2xl md:text-4xl font-kanit font-bold uppercase'>Bookings </h3>
                 </div>
 
                 {/* ASSIGN CAB DETAILS */}
-                <div className="grid lg:grid-cols-2 gap-5">
+                <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-5 md:px-24">
                     <BookingCard />
                     <BookingCard />
                     <BookingCard />

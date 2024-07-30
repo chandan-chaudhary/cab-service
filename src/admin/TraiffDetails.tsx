@@ -2,57 +2,84 @@
 
 // import React from 'react'
 
-import { useState } from "react"
+import { ChangeEvent, FormEvent, useState } from "react"
 import Traiff from '../traiff/Traiff';
+import { TraiffDetailProps } from "../traiff/traiff";
+
+
 
 function TraiffDetails() {
 const [traiff, setTraiff] = useState<string>('one-way');
 const [editMode, setEditMode] = useState<string>('');
+const [traiffData, setTraiffData] = useState<TraiffDetailProps>({
+  vehicleType: '',
+  ratePerKM: '',
+  driverBata: '',
+  additionalCharge: '',
+});
 
-const handleEditMode = (mode:string)=>{
+// HANDLE EDIT MODE
+ const handleEditMode = (mode:string)=>{
     setEditMode(mode);
 };
 
+// CAHNGES COLOR ACCORDING TO EDIT-MODE BUTTON
 const handleEditModeColor= (mode:string) =>{
   if(mode === 'add')  return 'bg-teal-500';
   if(mode === 'update')  return 'bg-purple-600';
   if(mode === 'remove')  return 'bg-red-500';
 }
 
+// HANDLE FORM SUBMIT
+const handleFormSubmit = (event: FormEvent<HTMLFormElement>) =>{
+  event.preventDefault();
+  console.log(traiffData);
+  traiffData.vehicleType= '';
+};
+
+// HANDLE INPUT CHANGE
+const HandleOnChange = (event:ChangeEvent<HTMLInputElement>) =>{
+        event.preventDefault();
+       setTraiffData({
+        ...traiffData,
+        [event.target.name]: event.target.value
+       })
+}
+
   return (
     <section className="">
-      <div className=' bg-gray-100 text-blue-950 py-16 '>
+      <div className='flex flex-col items-center bg-gray-100 text-blue-950 py-16 pb-44 '>
           {/* TRAIFF */}
             <div>
                 <Traiff />
             </div>
           {/* TRAIFF MODIFICATION FORM */}
-          <div className={` ${editMode === '' && 'hidden'} border-2 border-gray-300  rounded-lg py-8 mt-5 mx-5 md:mx-24 `}>
+          <div className={` ${editMode === '' && 'hidden'} bg-white  rounded-lg py-8 mt-5 mx-5 md:w-6/12 lg:w-5/12 border-b-4 border-blue-950 `}>
             <div className="flex flex-row text-lg space-x-5 font-bold  items-center justify-center">
-              <h3 onClick={()=>setTraiff('one-way') } className={`${traiff === 'one-way' && 'border-b-2 border-blue-950' } text-blue-950`}>One Way Traiff</h3>
-              <h3 onClick={()=>setTraiff('roundtrip')} className={`${traiff === 'roundtrip' && 'border-b-2 border-blue-950' } text-blue-950`} >Roundtrip Traiff</h3>
+              <h3 onClick={()=>setTraiff('one-way') } className={`${traiff === 'one-way' && 'border-b-2 border-blue-950' } text-blue-950  text-2xl`}>One Way</h3>
+              <h3 onClick={()=>setTraiff('roundtrip')} className={`${traiff === 'roundtrip' && 'border-b-2 border-blue-950' } text-blue-950 text-2xl`} >Roundtrip</h3>
             </div>
-            <form className="flex flex-col items-center py-8 space-y-4">
-              <div className="text-xl flex sm:flex-col w-full md:px-24 ">
-                <label htmlFor="vehicle-type">Veichle Type:</label>
-                <input type='text' name='vehicle-type' placeholder='Vehicle type' className="bg-gray-100 rounded-lg border-2" />
+            <form className="flex flex-col items-center py-8 space-y-4 sm:px-5 lg:px-10 " onSubmit={(e) => handleFormSubmit(e)}>
+              <div className="text-xl flex sm:flex-col w-full  ">
+                <label htmlFor="vehicle-type" className="text-lg">Veichle Type:</label>
+                <input type='text' name='vehicleType' value={traiffData.vehicleType} placeholder='Vehicle type' className="bg-gray-100 rounded-lg border-2 pl-5" onChange={(e)=> HandleOnChange(e)} />
               </div>
 
               {/* EDITMODE === REMOVE */}
               {
                 editMode === 'remove' ||
                  <>
-                  <div className="text-xl flex  sm:flex-col justify-between w-full md:px-24 ">
-                  <label htmlFor="rate">Rate (per KM):</label>
-                  <input type='number' name='rate' placeholder='rate/KM'   className="bg-gray-100 rounded-lg border-2 " />
+                  <div className="text-xl flex  sm:flex-col justify-between w-full ">
+                  <label htmlFor="rate"  className="text-lg">Rate (per KM):</label>
+                  <input type='number' name='ratePerKM' value={traiffData.ratePerKM} placeholder='rate/KM'   className="bg-gray-100 rounded-lg border-2 pl-5 " onChange={(e)=> HandleOnChange(e)} />
                   </div>
-                  <div className="text-xl flex  sm:flex-col  justify-between w-full md:px-24">
-                  <label htmlFor="driver-bata">Driver Bata:</label>
-                  <input type='number' name='driver-bata' placeholder='eg: ₹300'  className="bg-gray-100 rounded-lg border-2  " />
+                  <div className="text-xl flex  sm:flex-col  justify-between w-full ">
+                  <label htmlFor="driver-bata"  className="text-lg">Driver Bata:</label>
+                  <input type='number' name='driverBata' value={traiffData.driverBata} placeholder='eg: ₹300'  className="bg-gray-100 rounded-lg border-2  pl-5" onChange={(e)=> HandleOnChange(e)}/>
                   </div>
-                  <div className="text-xl flex  sm:flex-col justify-between w-full md:px-24">
-                  <label htmlFor="extra-charge">Additional Charges:</label>
-                  <input type='number' name='extra-charge' placeholder='eg: ₹500'   className="bg-gray-100 rounded-lg border-2 "/>
+                  <div className="text-xl flex  sm:flex-col justify-between w-full">
+                  <label htmlFor="extra-charge"  className="text-lg">Additional Charges:</label>
+                  <input type='number' name='additionalCharge' value={traiffData.additionalCharge} placeholder='eg: ₹500'   className="bg-gray-100 rounded-lg border-2 pl-5" onChange={(e)=> HandleOnChange(e)}/>
                   </div>
                 </> 
               }

@@ -1,38 +1,46 @@
 
 
 
-interface VehicleInfo{
-    vehicleName:string,
-    price: number,
-    driverBata: number,
-    additionalCharge?:string | number,
+export interface TraiffDetailProps{
+    vehicleType:string,
+    ratePerKM: string | number,
+    driverBata: string | number,
+    additionalCharge :string | number,
 }
+
+// this is traiif deatil admin interface 
+// interface VehicleDetails{
+//     vehicleType:string,
+//     ratePerKM:string,
+//     driverBata:string,
+//     additionalCharges: string,
+//   }
 
 export const traiffData = ['Vehicle Type', 'Rate KM/H', 'Driver Bata', 'Additional Charges'];
 
-const vehicleInfo: VehicleInfo[] = [
+const vehicleInfo: TraiffDetailProps[] = [
     {
-        vehicleName: 'sedan',
-        price: 20 ,
+        vehicleType: 'sedan',
+        ratePerKM: 20 ,
         driverBata: 0,
         additionalCharge: 'none',
     },
 
     {
-        vehicleName: 'etios',
-        price: 20,
+        vehicleType: 'etios',
+        ratePerKM: 20,
         driverBata: 0,
         additionalCharge: 'none',
     },
     {
-        vehicleName: 'suv',
-        price: 20,
+        vehicleType: 'suv',
+        ratePerKM: 20,
         driverBata: 0,
         additionalCharge: 'none',
     },
     {
-        vehicleName: 'suv',
-        price: 20,
+        vehicleType: 'suv',
+        ratePerKM: 20,
         driverBata: 0,
         additionalCharge: 'none',
     },

@@ -12,14 +12,14 @@ function AllVehicles() {
                 {selectCab.map((cab, idx)=>
                     <div key={idx} className="flex space-x-10 xl:space-x-36 bg-white sm:max-md:items-center w-fit pb-5 mb-5 justify-center mx-1 px-2 md:px-5  lg:max-xl:w-10/12 md:w-11/12">
                             <div className={''}>
-                                <img src={cab.cabPic} alt={'cabPic'} className={'lg:w-40'}/>
+                                <img src={cab.vehicleImage} alt={'cabPic'} className={'lg:w-40'}/>
                                 <div className={'flex flex-col mt-5'}>
                                     <div className={'flex space-x-5 items-center'}>
-                                        <h3 className={'uppercase font-bold font-kanit text-blue-700'}>{cab.cabName}</h3>
+                                        <h3 className={'uppercase font-bold font-kanit text-blue-700'}>{cab.vehicleName}</h3>
                                         <h5 className={'uppercase font-bold'}>{cab.vehicleType}</h5>
                                     </div>
                                     <div className={'flex space-x-5 font-bold text-sm'}>
-                                        <h5>{cab.seats} seats | {cab.airCondition ? 'AC' : 'Non-AC'}</h5>
+                                        <h5>{cab.seats} seats | {cab.airCondition}</h5>
                                         <h5 ><span className={'text-blue-700'}>Rs. {cab.price_Km}</span> per KM</h5>
                                     </div>
                                 </div>
