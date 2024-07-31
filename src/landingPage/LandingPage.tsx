@@ -61,22 +61,22 @@ const LandingPage:React.FC = () => {
     return(
         <section>
         <div className={'flex flex-col lg:flex-row  items-center   pb-16 bg-gray-100 px-3 mx-auto lg:pl-24'}>
-            <div className={' flex flex-col items-center justify-center space-y-8 pt-8 pb-16 bg-gray-100 px-3'}>
+            <div className={' flex flex-col items-center justify-center space-y-8 pt-8 pb-16 bg-gray-100 px-3 xl:pl-12 xl:pt-24 '}>
                 {/*TOP DIV*/}
                 <div className={'px-3 text-blue-950 pb-4'}>
                     <h5>FOR One Way Taxi Booking</h5>
                     <h1 className={'text-4xl font-bold font-kanit'}>Book your taxi online</h1>
-                    <div className={'flex justify-around pt-7 text-sm text-center items-center font-semibold'}>
+                    <div className={'flex justify-around pt-7 text-md lg:text-lg text-center items-center font-semibold'}>
                         <h4 className={'bg-blue-900  rounded-lg p-3 text-white'}>(+91)-0000000000</h4>
                         <h4  className={'bg-yellow-400 rounded-lg p-3 '}>chat with us</h4>
                     </div>
                 </div>
                 {/*BOOKING STATUS*/}
-                <div className={'grid grid-cols-4 gap-1 items-center justify-center '}>
+                <div className={'grid grid-cols-4 gap-1 xl:gap-x-3 items-center justify-center '}>
                     {bookingOption.map((booking, i) =>
-                            <div key={i} onClick={() => handleSelectedRoute(booking.bookingType)} className={`flex flex-col px-2 py-2 mx-1   text-center items-center rounded-xl uppercase text-blue-950 space-y-2 ${booking.bookingType === isSelected && 'bg-yellow-400'}   `}>
-                                <booking.bookIcon className={`text-xl `}/>
-                                <span className={'text-[10px] font-bold '}>{booking.bookingType}</span>
+                            <div key={i} onClick={() => handleSelectedRoute(booking.bookingType)} className={`flex flex-col px-2 py-2 mx-1   text-center items-center rounded-xl uppercase text-blue-950 space-y-2 ${booking.bookingType === isSelected && 'bg-yellow-400'}  `}>
+                                <booking.bookIcon className={`text-2xl lg:text-3xl `}/>
+                                <span className={'text-[12px]  font-bold '}>{booking.bookingType}</span>
                             </div>
                     )}
                 </div>
@@ -89,7 +89,7 @@ const LandingPage:React.FC = () => {
 
                 {/*IMAGES*/}
             {/*<div className={'xl:pl-12  flex '}>*/}
-                <img src={touristImg} alt={'tourist img'} className={'opacity-70 lg:absolute lg:-right-10 lg:top-[300px]  lg:w-6/12 '}/>
+                <img src={touristImg} alt={'tourist img'} className={'opacity-70 lg:absolute lg:-right-10 lg:top-[600px]  lg:w-6/12 '}/>
             {/*</div>*/}
         </div>
         </section>

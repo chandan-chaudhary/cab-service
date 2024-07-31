@@ -21,28 +21,28 @@ const RouteSelection = (props:routeProps) => {
                     props.isSelected === 'outstation' &&
                     outstationRoute.map((route, i) =>
                         <div key={i} onClick={() => props.setRoute(route.route)}
-                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900 '}  pb-2 text-center `}>{route.route}</div>
+                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900 '}  pb-2 text-center lg:text-xl `}>{route.route}</div>
                     )}
                 {/*LOCAL*/}
                 {
                     props.isSelected === 'local' &&
                     localRoute.map((route, i) =>
                         <div key={i} onClick={() => props.setRoute(route.route)}
-                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900'}  pb-2`}>{route.route}</div>
+                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900'}  pb-2  lg:text-xl`}>{route.route}</div>
                     )}
                 {/*TRANSFER*/}
                 {
                     props.isSelected === 'transfer' &&
                     transferRoute.map((route, i) =>
                         <div key={i} onClick={() => props.setRoute(route.route)}
-                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900'}  pb-2`}>{route.route}</div>
+                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900'}  pb-2  lg:text-xl`}>{route.route}</div>
                     )}
                 {/*DEAL*/}
                 {
                     props.isSelected === 'deal' &&
                     dealRoute.map((route, i) =>
                         <div key={i} onClick={() => props.setRoute(route.route)}
-                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900'}  pb-2`}>{route.route}</div>
+                              className={`${route.route === props.isRoute && 'border-b-4 border-blue-900'}  pb-2  lg:text-xl`}>{route.route}</div>
                     )}
             </div>
 
